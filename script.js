@@ -1,26 +1,29 @@
 let result = document.getElementById('result');
 
-function insertValue(value) {
-  result.value += value;
-}
-
-function calculate() {
-  try {
-    result.value = eval(result.value);
-  } catch (error) {
-    result.value = 'Error';
+function insertNumber(num) {
+  if (result.value == 0) {
+    result.value = num;
+  } else {
+    result.value += num;
   }
 }
 
-function clearResult() {
-  result.value = '';
+function insertOperator(op) {
+  result.value += op;
 }
 
-function deleteResult() {
+function insertFunction(func) {
+  result.value = func + result.value + ')';
+}
+
+function clearResult() {
+  result.value = '0';
+}
+
+function deleteNumber() {
   result.value = result.value.slice(0, -1);
 }
 
-function changeColor() {
-  let container = document.querySelector('.container');
-  container.classList.toggle('dark');
+function calculate() {
+  result.value = eval(result.value);
 }

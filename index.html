@@ -8,29 +8,38 @@
 <body>
   <div class="container">
     <div class="calculator">
-      <div class="display">
-        <input type="text" id="result" readonly>
+        <div class="display">
+          <input type="text" id="result" value="0" readonly>
+        </div>
+        <div class="buttons">
+          <button onclick="clearResult()">C</button>
+          <button onclick="deleteNumber()">DEL</button>
+          <button onclick="insertNumber('7')">7</button>
+          <button onclick="insertNumber('8')">8</button>
+          <button onclick="insertNumber('9')">9</button>
+          <button onclick="insertNumber('4')">4</button>
+          <button onclick="insertNumber('5')">5</button>
+          <button onclick="insertNumber('6')">6</button>
+          <button onclick="insertNumber('1')">1</button>
+          <button onclick="insertNumber('2')">2</button>
+          <button onclick="insertNumber('3')">3</button>
+          <button onclick="insertNumber('0')">0</button>
+          <button onclick="insertOperator('+')">+</button>
+          <button onclick="insertOperator('-')">-</button>
+          <button onclick="insertOperator('*')">*</button>
+          <button onclick="insertOperator('/')">/</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="insertNumber(Math.PI.toFixed(2))">π</button>
+          <button onclick="insertNumber(Math.E.toFixed(2))">e</button>
+          <button onclick="insertFunction('Math.sin(')">sin</button>
+          <button onclick="insertFunction('Math.cos(')">cos</button>
+          <button onclick="insertFunction('Math.tan(')">tan</button>
+          <button onclick="insertFunction('Math.sqrt(')">√</button>
+          <button onclick="insertFunction('Math.log(')">log</button>
+          <button onclick="insertFunction('Math.pow(')">x^y</button>
+        </div>
       </div>
-      <div class="buttons">
-        <button onclick="clearResult()">C</button>
-        <button onclick="deleteResult()">&larr;</button>
-        <button onclick="insertValue('/')">&divide;</button>
-        <button onclick="insertValue('*')">&times;</button>
-        <button onclick="insertValue('7')">7</button>
-        <button onclick="insertValue('8')">8</button>
-        <button onclick="insertValue('9')">9</button>
-        <button onclick="insertValue('-')">-</button>
-        <button onclick="insertValue('4')">4</button>
-        <button onclick="insertValue('5')">5</button>
-        <button onclick="insertValue('6')">6</button>
-        <button onclick="insertValue('+')">+</button>
-        <button onclick="insertValue('1')">1</button>
-        <button onclick="insertValue('2')">2</button>
-        <button onclick="insertValue('3')">3</button>
-        <button onclick="insertValue('.')">.</button>
-        <button onclick="insertValue('0')">0</button>
-        <button onclick="calculate()">=</button>
-      </div>
+      
     </div>
     <button onclick="changeColor()">Change Color</button>
   </div>
